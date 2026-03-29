@@ -1,0 +1,22 @@
+{
+  "name": "zeta-app",
+  "version": "1.0.0",
+  "description": "Zeta - 个人财产监控平台",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "android:init": "npx cap init Zeta com.zeta.app --web-dir=dist",
+    "android:add": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:build": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@capacitor/cli": "^6.0.0"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/android": "^6.0.0"
+  }
+}
